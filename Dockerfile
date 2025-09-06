@@ -6,6 +6,6 @@ RUN npm install --omit=dev
 
 COPY app.js ./
 
-# 缩小镜像体积，提升安全性
+# Reduce image size and improve security
 USER node
 CMD ["node", "app.js"]
