@@ -1,0 +1,11 @@
+version: "3.8"
+services:
+  auto-self-transfer:
+    build: .
+    container_name: auto-self-transfer
+    restart: unless-stopped
+    env_file:
+      - .env
+    # If you want the container time to match the host (for more readable logs)
+    environment:
+      - TZ=UTC
